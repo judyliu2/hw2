@@ -1,0 +1,22 @@
+#include <stdio.h>
+int t = 0; 
+int i; 
+int j;
+
+int addd(){
+  for (i = 3; i < 1000; i+= 3){
+    t += i;
+  }
+  printf ("%d \n", t);
+  for (j = 5; j < 1000; j+=5){
+    t += j;
+  }
+  printf("%d \n", t);
+}
+
+int main(){
+   addd();
+   printf("%d \n", t);
+   return 0;
+
+}
