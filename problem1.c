@@ -1,21 +1,22 @@
 #include <stdio.h>
 int t = 0; 
 int i; 
-int j;
 
-int addd(){
-  for (i = 3; i < 1000; i+= 3){
-    t += i;
+int add(){
+  //multiples are below 1000 
+  for (i = 2 ; i < 1000 ; i++){
+    if (i % 3 == 0){  //multiplies of 3 and 5 and no two of the same one
+      t += i;
+    }
+    else if (i % 5 == 0){
+      t += i;
+    }
   }
-  printf ("%d \n", t);
-  for (j = 5; j < 1000; j+=5){
-    t += j;
-  }
-  printf("%d \n", t);
+  return 0;
 }
 
 int main(){
-   addd();
+   add();
    printf("%d \n", t);
    return 0;
 

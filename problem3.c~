@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int sumsquare(int i){
+  int sum;
+  
+  if (i == 0){
+    return 0;
+  }
+  if (i == 1){
+    return 1;
+  }
+  else{
+    sum += i * sumsquare(i -1);
+  }
+}
+
+int sumdif(int a , int b){
+  return sumsquare(a) - subsquare(b);
+}
+
+int main(){
+  return sumdif(55, 10);
+}
